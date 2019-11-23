@@ -22,7 +22,7 @@ router.post('/tasks/:taskId', function(req, res, next) {
   todoList.updateTask(req,res);
 });
 router.get('/tasks/:taskId/remove', function(req, res, next) {
-  todoList.delete(req,res);
+  todoList.deleteTask(req,res);
 });
 
 module.exports = router;
