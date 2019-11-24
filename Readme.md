@@ -2,3 +2,6 @@ Test task. TODO list.
 
 REST API server + MongoDB + REACT.js 
 
+/tasks - (get) all tasks | (post) - create a task
+/tasks/id - (get) one task | (post) update task
+/tasks/id/remove - (get) remove a task
