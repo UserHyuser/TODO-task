@@ -6,9 +6,17 @@ let TaskSchema = new Schema({
 		type: String,
 		required: 'Enter the name of the task'
 	},
-	Created_date: {
+	priority:{
+		type: String,
+		default: 'Low'
+	},
+	createdDate: {
 		type: Date,
 		default: Date.now
+	},
+	timeToEnd:{
+		type: Date,
+		default: Date.now().day //TODO: Разобраться с date
 	},
 	status: {
 		type: [{
