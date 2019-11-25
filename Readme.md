@@ -8,3 +8,6 @@ REST API server + MongoDB + REACT.js
 
 React-frontend was added with npx create-react-app react-frontend - that's cool feature
 
+REST: 3001 port
+SPA: 3000 port
+
