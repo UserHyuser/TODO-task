@@ -9,18 +9,27 @@ export default class App extends Component {
       oneTask: false,
       tasks: [],
       task: {},
+      title: '',
+      priority: '',
     };
   }
 
-    componentDidMount = (refresh) => {
-      fetch('http://localhost:3001/tasks')
-        .then((response) => response.json())
-        .then((responseJson) => {
-          this.setState({ tasks: responseJson });
-          if (refresh) {
-            this.showAllTasks();
-          }
-        });
+    componentDidMount = () => {
+      try {
+        fetch('http://localhost:3001/tasks')
+          .then((response) => response.json(), (reject) => {
+            setTimeout(
+              this.componentDidMount,
+              1000,
+            );
+            throw reject;
+          })
+          .then((responseJson) => {
+            this.setState({ tasks: responseJson });
+          });
+      } catch (e) {
+        console.error(e);
+      }
     }
 
     showOneTask = (id) => {
@@ -72,11 +81,12 @@ export default class App extends Component {
           headers: {
             'Content-Type': 'application/json',
           },
-        });
+        }).then(
+          (answer) => this.componentDidMount(),
+        );
       } catch (e) {
         console.error(e);
       }
-      this.componentDidMount('refresh');
     }
 
     updateTask = (id) => {
