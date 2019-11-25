@@ -1,6 +1,6 @@
 Test task. TODO list.
 
-REST API server + MongoDB + REACT.js 
+REST API server (should add users) + MongoDB (done) + REACT.js (infinite process) 
 
 /tasks - (get) all tasks | (post) - create a task
 /tasks/id - (get) one task | (post) update task

@@ -16,9 +16,7 @@ let TaskSchema = new Schema({
 	},
 	timeToEnd:{
 		type: Date,
-		default: function () {
-			return Date.now()
-		} //TODO: Разобраться с date
+		default: Date.now //TODO: Разобраться с date
 	},
 	status: {
 		type: [{
