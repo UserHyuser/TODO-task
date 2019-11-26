@@ -10,7 +10,6 @@ exports.createTask = function(req, res) { // Коллбеки у асинхро�
 	let new_task = new Task(req.body);
 	new_task.save(function(err, task) {
 		if (err) res.send(err);
-		//res.json(task);
 		res.json({ message: 'Task was successfully created' });
 	});
 };
