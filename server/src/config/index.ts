@@ -28,11 +28,11 @@ const config = convict({
     default: 'v1',
     env: 'APP_VERSION',
   },
-  db: {
+  db: { // Заменил адрес ДБ
     uri: {
       doc: 'Mongodb connection URI',
       format: String,
-      default: 'mongodb://admin:p1230h6t34qd4i7ex@aspiritywebtemplate_mongodb:27017/aspiritytemplate?authSource=admin',
+      default: 'mongodb+srv://userdb:9R89pNDCLx8z1CcQ@cluster0-bx7mg.mongodb.net/TODOdb?retryWrites=true&w=majority',
       env: 'MONGO_URI',
     },
   },

@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import {Mongoose} from "mongoose";
+import {Mongoose} from 'mongoose';
 import config from './config';
 
 class MongoDB {

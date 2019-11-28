@@ -22,12 +22,12 @@
 
 ### Configuration
 Default database connection uri:
-*mongodb://admin:p1230h6t34qd4i7ex@aspiritywebtemplate_mongodb:27017/aspiritytemplate?authSource=admin*
+*mongodb://admin:p1230h6t34qd4i7ex@aspiritywebtemplate_mongodb:27017/aspiritytemplate?authSource=admin* | 'mongodb+srv://userdb:9R89pNDCLx8z1CcQ@cluster0-bx7mg.mongodb.net/TODOdb?retryWrites=true&w=majority'
 
 where
-  * username: admin
-  * password: p1230h6t34qd4i7ex
-  * host: aspiritywebtemplate_mongodb (it is container name for docker development flow)
+  * username: admin | userdb
+  * password: p1230h6t34qd4i7ex | 9R89pNDCLx8z1CcQ
+  * host: aspiritywebtemplate_mongodb (it is container name for docker development flow) 
   * port: 27017
   
 ### Known issues

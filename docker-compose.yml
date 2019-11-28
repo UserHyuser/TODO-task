@@ -2,7 +2,7 @@ version: '2'
 services:
   client:
     build: ./client
-    container_name: aspiritywebtemplate_client
+    container_name: todo_client
     ports:
       - 3000:3000
     volumes:
@@ -12,7 +12,7 @@ services:
     command: bash -c 'if [ $NODE_ENV = "production" ]; then yarn start; else yarn start:debug; fi'
   server:
     build: ./server
-    container_name: aspiritywebtemplate_server
+    container_name: todo_server
     ports:
       - 8080:8080
       - 5858:5858
@@ -26,9 +26,9 @@ services:
     command: bash -c 'if [ $NODE_ENV = "production" ]; then yarn start; else yarn start:debug; fi'
   mongodb:
     build: ./mongodb
-    container_name: aspiritywebtemplate_mongodb
+    container_name: todo_mongodb
     ports:
       - 27017:27017
     environment:
-      MONGODB_PASS: "p1230h6t34qd4i7ex"
+      MONGODB_PASS: "9R89pNDCLx8z1CcQ"
     command: ["/bin/run.sh"]

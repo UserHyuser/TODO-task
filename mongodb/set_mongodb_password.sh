@@ -1,7 +1,7 @@
 #!/bin/bash
 
-USER=${MONGODB_USER:-"admin"}
-DATABASE=${MONGODB_DATABASE:-"admin"}
+USER=${MONGODB_USER:-"userdb"}
+DATABASE=${MONGODB_DATABASE:-"TODOdb"}
 PASS=${MONGODB_PASS:-$(pwgen -s 12 1)}
 _word=$( [ ${MONGODB_PASS} ] && echo "preset" || echo "random" )
 
