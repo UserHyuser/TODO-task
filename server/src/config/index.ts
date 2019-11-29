@@ -12,7 +12,7 @@ const config = convict({
     url: {
       doc: 'Base server url',
       format: String,
-      default: 'http://localhost:8080',
+      default: 'http://0.0.0.0:8080',
       env: 'APP_URL',
     },
     port: {

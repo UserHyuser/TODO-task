@@ -39,8 +39,8 @@ module.exports = {
     hot: true,
     host: '0.0.0.0',
     port: 3000,
-    proxy: {
-      '/api': 'http://aspiritywebtemplate_serve:8080',
+    proxy: { // replace http://aspiritywebtemplate_serve:8080 to 0.0.0.0:8080
+      '/api': '0.0.0.0:8080',
     },
   },
 };
