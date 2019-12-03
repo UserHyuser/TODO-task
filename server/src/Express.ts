@@ -1,9 +1,11 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
+let Task = require('./models/todoListModel');
 import RequestsLogger from './RequestsLogger';
 import passport from './middlewares/Passport';
 import customValidators from './middlewares/customValidators';
 import MainController from './controllers/MainController';
+
 
 const requestsLogger = new RequestsLogger();
 

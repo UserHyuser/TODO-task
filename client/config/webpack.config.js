@@ -5,12 +5,13 @@ module.exports = {
     'react-hot-loader/patch',
     './src/index.jsx',
   ],
+  watch: true,
   output: {
     path: `${__dirname}public`,
     publicPath: '/',
     filename: 'bundle.js',
   },
-  resolve: {
+  resolve: {--watch
     extensions: ['*', '.js', '.jsx'],
   },
   module: {
@@ -36,11 +37,10 @@ module.exports = {
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
-    hot: true,
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 3000,
     proxy: { // replace http://aspiritywebtemplate_serve:8080 to 0.0.0.0:8080
-      '/api': '0.0.0.0:8080',
+      '/api': 'localhost:8080',
     },
   },
 };

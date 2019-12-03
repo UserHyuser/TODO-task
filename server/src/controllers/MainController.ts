@@ -2,6 +2,7 @@ import * as v1Controllers from './v1';
 import VersionController from './VersionController';
 import BaseController from './BaseController';
 
+
 class MainController extends BaseController {
   public init(): void {
     const versionController = new VersionController();
